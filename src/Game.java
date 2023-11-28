@@ -6,8 +6,6 @@ public class Game {
 
     ValidateGame validateGame = new ValidateGame();
 
-    boolean turnX = true;
-
     int turns = 9;
 
     public Game() {
@@ -44,5 +42,9 @@ public class Game {
     private void makeMove(String input, char player) {
         Move move = new Move(input);
         board[move.row][move.col] = player;
+    }
+
+    public boolean isTurnOver(){
+        return turns==0;
     }
 }

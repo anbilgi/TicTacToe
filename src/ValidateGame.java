@@ -1,6 +1,6 @@
 public class ValidateGame {
 
-    public boolean isMoveValid(char[][] board, String input) throws Exception {
+    public boolean isMoveValid(char[][] board, String input) {
         Move move = new Move(input);
 
         if (move.row < 0 && move.row > 3)
@@ -16,6 +16,7 @@ public class ValidateGame {
 
     public boolean isStrike(char[][] board, char player) {
         boolean hasWon = false;
+
         for (int i = 0; i < 3; i++) {
             if (board[i][0] == player && board[i][1] == player && board[i][2] == player)
                 hasWon = true;

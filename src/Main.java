@@ -33,6 +33,10 @@ public class Main {
                         game.printBoard();
                         System.out.println("\nGame over...Player " + turn + " won! yay!!");
                         break;
+                    } else if (game.isTurnOver()) {
+                        game.printBoard();
+                        System.out.println("\nGame over...Nobody won :( ");
+                        break;
                     }
                 } catch (Exception ex) {
                     System.err.println(ex.getMessage());
