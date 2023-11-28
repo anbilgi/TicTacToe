@@ -39,7 +39,8 @@ public class Main {
                         break;
                     }
                 } catch (Exception ex) {
-                    System.err.println(ex.getMessage());
+                    System.err.println("Spot is not empty, try again..");
+                    continue;
                 }
             } else {
                 if (!"exit".equals(input)) {

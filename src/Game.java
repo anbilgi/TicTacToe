@@ -33,6 +33,9 @@ public class Game {
                 makeMove(input, player);
                 turns--;
             }
+            else{
+                throw new Exception("invalid move");
+            }
         } catch (Exception e) {
             throw new Exception("invalid move");
         }

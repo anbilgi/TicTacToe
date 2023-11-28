@@ -3,9 +3,9 @@ public class ValidateGame {
     public boolean isMoveValid(char[][] board, String input) {
         Move move = new Move(input);
 
-        if (move.row < 0 && move.row > 3)
+        if (move.row < 0 || move.row > 2)
             return false;
-        if (move.col < 0 && move.row > 3)
+        if (move.col < 0 || move.row > 2)
             return false;
 
         if (board[move.row][move.col] == '_') {
